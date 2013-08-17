@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="../../CSS/style.css"/>
+    <script type="text/javascript" src="../../Scripts/myscripts.js"></script>
+</head>
+<body>
+    <header><h1>Das ist die Überschrift</h1></header>
+    
+    <nav id="nav1" onfocus="test();">Ein Nav-Feld
+        <ul>
+            <li id="li1" onfocus="test();">Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3:<br />
+                <ul>
+                    <li id="inner1">Inner Item 1</li>
+                    <li>Inner Item 2</li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+   
+
+    <section style="height: 200px;">
+        <div id="mapholder"></div>
+        <p>Der eigentlicher Text</p>
+        <input id="button1" type="button" onclick="test(event);" value="testbutton"/>
+        <input type="button" onclick="getLocation();" value="showPosition"/>
+        <input type="button" onclick="test2();" value="test2button"/>
+        <input type="button" onclick="hideElement('inner1');" value="Hide Inner Item1"/>
+    </section>
+    
+    <section>
+        Noch eine Section
+        <form action="/Home" method="GET" name="testForm" onsubmit="return emailValidation()" >
+            <!-- <input id="inputfield1" type="text" placeholder="Keine Ziffern" autofocus required pattern="[a-zA-Z]*" title="Bitte nur Kleinbuchstaben eingeben"/> --->
+            <input type="text" name="textInput1"/>
+            <input type="submit" value="Eingabe"/>
+        </form>
+        <div id="errorText1"></div>
+        
+    </section>
+    
+    <aside>Seite</aside>
+    
+    <footer>Dies ist Fußzeile mit tollen Copyright Infos</footer>
+</body>
+</html>
