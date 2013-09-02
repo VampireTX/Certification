@@ -6,7 +6,11 @@ header {
 
     border: 1px solid black;
     background-color: yellow;
-    padding: 10px;
+    position: absolute;
+    right: 0px;
+    height: 200px;
+    top:0px;
+    width: 100%;
 }
 
 p {
@@ -14,16 +18,28 @@ p {
 }
 
 nav {
+    position: absolute;
     margin: 0;
     padding: 0;
-    width: 18em;
-
+    width: 150px;
+    height: 500px;
+    top:200px;
+    left:0px;
     border: 1px solid black;
     background-color: orange;
 }
+
+#content {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top:200px;
+    left:150px;
+}
+
 section {
-    margin: 0 12em 0 16em;
-    padding: 0 1em;
+    left:0px;
+    width: 600px;
     border: 1px solid black;
     background-color: yellowgreen;
 

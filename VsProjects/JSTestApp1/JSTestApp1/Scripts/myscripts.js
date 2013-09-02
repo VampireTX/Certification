@@ -1,31 +1,4 @@
-﻿function test() {
-    var childElements = document.getElementById("nav1").getElementsByTagName("ul")[0].getElementsByTagName("li"),
-        anz,
-        newnav,
-        text,
-        testarray,
-        i;
-
-    anz = 0;
-    for (i = 0; i < childElements.length; i++) {
-        if (childElements[i].parentNode === document.getElementById("nav1").getElementsByTagName("ul")[0]) {
-            anz++;
-        }
-    }
-    anz++;
-
-    newnav = document.createElement('li');
-    text = document.createTextNode('Item ' + anz);
-    newnav.appendChild(text);
-
-    document.getElementById("nav1").getElementsByTagName("ul")[0].appendChild(newnav);
-
-    testarray = new Array('a', 'b', 'c', 'd', 'e');
-
-    testarray.splice(2, 1);
-
-    alert(testarray.join(" "));
-}
+﻿
 
 function test2() {
     var element = document.getElementById("li1");
@@ -86,6 +59,55 @@ function emailValidationOnBlur() {
     }
     
 }
+
+
+(function ($, undefined) {
+    var i = 1,
+        that = this,
+        test = function () {
+            var childElements = document.getElementById("nav1").getElementsByTagName("ul")[0].getElementsByTagName("li"),
+                anz,
+                newnav,
+                text,
+                testarray,
+                i;
+
+            anz = 0;
+            for (i = 0; i < childElements.length; i++) {
+                if (childElements[i].parentNode === document.getElementById("nav1").getElementsByTagName("ul")[0]) {
+                    anz++;
+                }
+            }
+            anz++;
+
+            newnav = document.createElement('li');
+            text = document.createTextNode('Item ' + anz);
+            newnav.appendChild(text);
+
+            document.getElementById("nav1").getElementsByTagName("ul")[0].appendChild(newnav);
+
+            testarray = new Array('a', 'b', 'c', 'd', 'e');
+
+            testarray.splice(2, 1);
+
+            alert(testarray.join(" "));
+        };
+
+
+    $(document).ready(function () {
+        $('#button1').click(test);
+        update();
+        window.setInterval("update()", 2000);
+    });
+
+})(jQuery, undefined);
+
+var i = 1;
+function update () {
+    $('#SpeedText').text("blub " + i);
+    i++;
+};
+
 
 window.onerror = function (errorMsg, url, lineNumber) {
     alert(errorMsg);
